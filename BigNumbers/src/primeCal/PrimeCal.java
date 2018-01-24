@@ -10,6 +10,8 @@
  */
 package primeCal;
 
+import java.math.BigInteger;
+
 /**
  * This Class provides the calculator for the program to determine whether or not a number is prime.
  * @author hufftd
@@ -17,6 +19,33 @@ package primeCal;
  */
 
 public class PrimeCal {
-	
+
+	public boolean calculatePrime(BigInteger input)
+	{
+		// Start
+		
+		// check if even
+		BigInteger two = new BigInteger("2"); 
+		// if input is not 2 and input's mod is equal to 2, then returns false
+	    if (!two.equals(input) && BigInteger.ZERO.equals(input.mod(two)))
+	    {
+	        return false;
+	    }
+
+	    // find divisor if any from 3 to 'number'
+	    // for-loop where i adds to per cycle and cycles until i*i < input.
+	    for (BigInteger i = new BigInteger("3"); i.multiply(i).compareTo(input) < 1; i = i.add(two))
+	    { 
+	    	// start from 3, 5, etc. the odd number, and look for a divisor if any
+	        if (BigInteger.ZERO.equals(input.mod(i))) 
+	        {
+	        	// check if 'i' is divisor of 'number'
+	        	return false;
+	        }
+	            
+	    }
+		return true;
+		// End
+	}
 
 }
