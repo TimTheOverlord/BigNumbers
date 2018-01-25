@@ -3,7 +3,7 @@
  * Assignment #: Assignment03
  * Due Date: 1-30-18
  * Course / Section / Semester: IT2045C / 001 / Spring 2018
- * Citations: none
+ * Citations: Stack overflow
  * Description: This program calculates whether or not a number is prime.
  * Anything Else Relevant: 
  * Last Worked on: X-XX-XX
@@ -20,10 +20,12 @@ import java.math.BigInteger;
 
 public class PrimeCal {
 
-	public boolean calculatePrime(BigInteger input)
+	public boolean calculatePrime(int inputNum)
 	{
 		// Start
-		
+		// In accordance with the code he wrote, I had to cast the System.in of the main method into a BigInteger. This is that casting.
+		BigInteger input = new BigInteger("0");
+		input = BigInteger.valueOf(inputNum);
 		// check if even
 		BigInteger two = new BigInteger("2"); 
 		// if input is not 2 and input's mod is equal to 2, then returns false
