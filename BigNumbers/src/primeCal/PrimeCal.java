@@ -6,7 +6,8 @@
  * Citations: Stack overflow
  * Description: This program calculates whether or not a number is prime.
  * Anything Else Relevant: 
- * Last Worked on: X-XX-XX
+ * Last Worked on: 1-25-18
+ * Partner: Tyler Smith
  */
 package primeCal;
 
